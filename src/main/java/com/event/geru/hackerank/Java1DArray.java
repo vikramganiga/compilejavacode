@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Java1DArray {
 
-	public static boolean CanWinHelper(int leap, int[] game, boolean[] visited, int index) {
+	public boolean CanWinHelper(int leap, int[] game, boolean[] visited, int index) {
 		int len = game.length;
 
 		if (index >= len - 1 || (index + leap) >= game.length) {
@@ -31,7 +31,7 @@ public class Java1DArray {
 		return false;
 	}
 
-	public static boolean canWin(int leap, int[] game) {
+	public boolean canWin(int leap, int[] game) {
 		// Return true if you can win the game; otherwise, return false.
 
 		if (game == null || game.length == 0) {
@@ -49,6 +49,9 @@ public class Java1DArray {
 	}
 
 	public static void main(String[] args) {
+		
+		Java1DArray java1dArray = new Java1DArray();
+		
 		Scanner scan = new Scanner(System.in);
 		int q = scan.nextInt();
 		while (q-- > 0) {
@@ -60,7 +63,7 @@ public class Java1DArray {
 				game[i] = scan.nextInt();
 			}
 
-			System.out.println((canWin(leap, game)) ? "YES" : "NO");
+			System.out.println((java1dArray.canWin(leap, game)) ? "YES" : "NO");
 		}
 		scan.close();
 	}

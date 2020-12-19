@@ -1,6 +1,6 @@
 package com.event.geru.test.hackerrank;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TestJavaDequeue {
 
