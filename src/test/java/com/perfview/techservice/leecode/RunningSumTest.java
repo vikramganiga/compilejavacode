@@ -1,9 +1,10 @@
 package com.perfview.techservice.leecode;
 
-import com.perfview.geru.leetcode.RunningSum;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.perfview.techservice.leetcode.RunningSum;
 
 public class RunningSumTest {
 	

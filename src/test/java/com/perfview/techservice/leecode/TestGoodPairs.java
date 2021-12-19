@@ -1,9 +1,10 @@
 package com.perfview.techservice.leecode;
 
-import com.perfview.geru.leetcode.GoodPairs;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.perfview.techservice.leetcode.GoodPairs;
 
 public class TestGoodPairs {
 	

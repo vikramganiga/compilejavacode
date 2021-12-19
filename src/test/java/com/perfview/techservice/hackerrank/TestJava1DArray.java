@@ -2,9 +2,10 @@ package com.perfview.techservice.hackerrank;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.perfview.geru.hackerank.Java1DArray;
 
 import org.junit.jupiter.api.Test;
+
+import com.perfview.techservice.hackerank.Java1DArray;
 
 public class TestJava1DArray {
 
