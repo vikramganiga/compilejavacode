@@ -28,7 +28,8 @@ public class MergeSort {
 
 		mergeSort(input, startIndex, midIndex);
 		mergeSort(input, midIndex + 1, endIndex);
-		sort(input, startIndex, midIndex, endIndex);
+		//sort(input, startIndex, midIndex, endIndex);
+		descendingSort(input, startIndex, midIndex, endIndex);
 
 	}
 
@@ -42,6 +43,37 @@ public class MergeSort {
 
 		while (firstIndex <= midIndex && secondIndex <= endIndex) {
 			if (input[firstIndex] <= input[secondIndex]) {
+				mergeArray[mergeIndex++] = input[firstIndex++];
+			} else {
+				mergeArray[mergeIndex++] = input[secondIndex++];
+			}
+
+		}
+
+		while (firstIndex <= midIndex) {
+			mergeArray[mergeIndex++] = input[firstIndex++];
+		}
+
+		while (secondIndex <= endIndex) {
+			mergeArray[mergeIndex++] = input[secondIndex++];
+		}
+
+		for (int i = 0, j = startIndex; i < mergeArray.length; i++, j++) {
+			input[j] = mergeArray[i];
+		}
+
+	}
+	
+	private static void descendingSort(int[] input, int startIndex, int midIndex, int endIndex) {
+
+		int mergeArray[] = new int[endIndex - startIndex + 1];
+
+		int firstIndex = startIndex;
+		int secondIndex = midIndex + 1;
+		int mergeIndex = 0;
+
+		while (firstIndex <= midIndex && secondIndex <= endIndex) {
+			if (input[firstIndex] >= input[secondIndex]) {
 				mergeArray[mergeIndex++] = input[firstIndex++];
 			} else {
 				mergeArray[mergeIndex++] = input[secondIndex++];
