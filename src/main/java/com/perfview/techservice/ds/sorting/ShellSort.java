@@ -1,6 +1,6 @@
 package com.perfview.techservice.ds.sorting;
 
-public class shellsort {
+public class ShellSort {
 
     public static void main(String args[]){
         int arr[] = {10,2};

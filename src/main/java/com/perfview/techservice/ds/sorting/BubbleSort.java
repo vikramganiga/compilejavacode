@@ -8,7 +8,7 @@ package com.perfview.techservice.ds.sorting;
  * It is quadratic - O(n^2)
  * 
  */
-public class bubblesort {
+public class BubbleSort {
     
     public static void main(String[] args) {
         int array[] = {10,31,11,-1,23,45};
