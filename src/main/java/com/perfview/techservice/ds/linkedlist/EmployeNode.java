@@ -2,8 +2,8 @@ package com.perfview.techservice.ds.linkedlist;
 
 public class EmployeNode {
 
-	EmployeNode next;
-	Employee employee;
+	private EmployeNode next;
+	private Employee employee;
 	
 	
 	public EmployeNode( Employee employee) {

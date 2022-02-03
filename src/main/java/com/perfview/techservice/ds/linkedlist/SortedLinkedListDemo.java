@@ -1,19 +1,22 @@
 package com.perfview.techservice.ds.linkedlist;
 
-public class Demo {
+public class SortedLinkedListDemo {
 
 	public static void main(String args[]) {
 		
-		Employee employee = new Employee("A");
-		EmployeLinkedList employeLinkedList = new EmployeLinkedList(employee);
+		EmployeSortedLinkedList employeLinkedList = new EmployeSortedLinkedList();
 		
-		//Adding one more employee
-		employee = new Employee("B");
-		employeLinkedList.addFront(employee);
+		Employee employee = new Employee("A");
+		employeLinkedList.addAscendingOrder(employee);
 		
 		//Adding one more employee
 		employee = new Employee("C");
-		employeLinkedList.addFront(employee);
+		employeLinkedList.addAscendingOrder(employee);
+		
+
+		//Adding one more employee
+		employee = new Employee("B");
+		employeLinkedList.addAscendingOrder(employee);
 
 		employeLinkedList.display();
 		

@@ -46,4 +46,34 @@ public class EmployeeDLinkedList {
 		} while (employeeNode != null);
 	}
 
+	public void addBefore(Employee newEmployee, Employee existingEmployee) {
+
+		EmployeeNode employeeNode = this.employeeNode;
+		EmployeeNode employeeNodeBack = null;
+		EmployeeNode employeeNodeNew = new EmployeeNode(newEmployee);
+		
+		while (employeeNode != null) {			
+			//System.out.println(employeeNode.getEmployee().getName());
+			if ( employeeNode.getEmployee().getName().contentEquals(existingEmployee.getName())) {
+				
+				if(employeeNodeBack ==  null) {
+					//first node
+					employeeNode.setHead(employeeNodeNew);
+					employeeNodeNew.setTail(employeeNode);
+					this.employeeNode = employeeNodeNew;
+				}
+				else {
+					employeeNodeBack.setTail(employeeNodeNew);
+					employeeNodeNew.setHead(employeeNodeBack);
+					
+					employeeNodeNew.setTail(employeeNode);
+					employeeNode.setHead(employeeNodeNew);
+				}
+			}
+
+			employeeNodeBack = employeeNode;
+			employeeNode = employeeNode.getTail();
+		}
+	}
+
 }

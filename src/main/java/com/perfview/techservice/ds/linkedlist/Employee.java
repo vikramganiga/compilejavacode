@@ -2,9 +2,8 @@ package com.perfview.techservice.ds.linkedlist;
 
 public class Employee {
 
-	String name;
+	private String name;
 
-	
 	public Employee(String name) {
 		super();
 		this.name = name;

@@ -10,7 +10,7 @@ public class EmployeLinkedList {
 
 	public void addFront(Employee employee) {
 		EmployeNode employeNode = new EmployeNode(employee);
-		employeNode.next = this.employeNode;
+		employeNode.setEmployeNode(this.employeNode);
 		this.employeNode = employeNode;
 	}
 
@@ -18,13 +18,13 @@ public class EmployeLinkedList {
 		EmployeNode list = this.employeNode;
 
 		while (list != null) {
-			System.out.println("Employee " + list.employee.getName());
-			list = list.next;
+			System.out.println("Employee " + list.getEmployee().getName());
+			list = list.getEmployeNode();
 		}
 	}
 
 	public void deleteFront() {
-		employeNode = employeNode.next;
+		employeNode = employeNode.getEmployeNode();
 	}
 
 }

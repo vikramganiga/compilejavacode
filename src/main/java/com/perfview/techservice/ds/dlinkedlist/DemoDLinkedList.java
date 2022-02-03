@@ -15,9 +15,18 @@ public class DemoDLinkedList {
 		employee = new Employee("C");
 		employeeDLinkedList.addFront(employee);
 		
+		System.out.println("Add Front Works");
 		employeeDLinkedList.print();
 		
+		System.out.println("Delete works");
 		employeeDLinkedList.deleteFront();
+		employeeDLinkedList.print();
+		
+		Employee employeeExisting = new Employee("B");
+		Employee employeeNew = new Employee("Z");
+		
+		System.out.println("Add Before works");
+		employeeDLinkedList.addBefore(employeeNew,employeeExisting);
 		employeeDLinkedList.print();
 	
 	}
