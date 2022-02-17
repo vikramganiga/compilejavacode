@@ -23,7 +23,7 @@ public class Queue {
 
 	public Employee remove() {
 
-		if (front == -1 && front >= data.size())
+		if (front > back)
 			return null;
 		else {
 			front++;
