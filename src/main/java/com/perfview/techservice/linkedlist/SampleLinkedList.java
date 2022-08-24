@@ -5,26 +5,24 @@ public class SampleLinkedList {
     private int data;
     private SampleLinkedList nextNode;
 
-   
     public SampleLinkedList(int data) {
         this.data = data;
         this.nextNode = null;
     }
-    
-    public SampleLinkedList add(SampleLinkedList sampleLinkedList, int value){
-        SampleLinkedList newList = new SampleLinkedList(value);
 
-        sampleLinkedList.nextNode=newList;
-       
-        return newList;
+    public int getData() {
+        return data;
     }
 
-    public void printNodeValue(){
-        System.out.println(" value "+ data);
-    }
-    
-    public SampleLinkedList getNode(){
-        return this.nextNode;
+    public void setData(int data) {
+        this.data = data;
     }
 
+    public SampleLinkedList getNextNode() {
+        return nextNode;
+    }
+
+    public void setNextNode(SampleLinkedList nextNode) {
+        this.nextNode = nextNode;
+    }  
 }

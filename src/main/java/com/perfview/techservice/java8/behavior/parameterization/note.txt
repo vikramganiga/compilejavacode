@@ -1,0 +1,6 @@
+Chapter 2 - Passing Code with behaviour Parameterization
+  - Behaviour Parameterization is Software Design/development Pattern that let you handle frequent requirement changes.
+  - Anonymous class - that don't have name. they allow to declare and instantiate a class at the same time. It allow to create adhoc implementation
+  - This pattern encapsulate a behaviour (a piece of code) and parameterize the behaviour of the methods by passing and using these behaviour create
+  - strategy design pattern
+  - ex. GUI event handle, Runnable Interface 
