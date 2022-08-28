@@ -29,7 +29,16 @@ class CompileLinkedList {
             linkedList=p_linkedList.addAtTail(linkedList, value);
         }
 
-        // print linkedlist
+        //insert at position
+        p_linkedList.insertAtPosition(linkedList, 123, 3);
+        
+        // print linkedlist before delete
+        p_linkedList.printLinkedList(linkedList);
+
+        //delete node position
+        p_linkedList.deleteNode(linkedList, 2);
+
+        // print linkedlist after delete
         p_linkedList.printLinkedList(linkedList);
         scanner.close();
     }
