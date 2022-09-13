@@ -15,6 +15,7 @@ class CompileLinkedList {
     public static void main(String args[]) {
         ProcessLinkedList p_linkedList = new ProcessLinkedList();
         SampleLinkedList linkedList = null;
+        SampleLinkedList reversedLinkedList = null;
 
         // create new linkedlist
         Scanner scanner = new Scanner(System.in);
@@ -41,5 +42,8 @@ class CompileLinkedList {
         // print linkedlist after delete
         p_linkedList.printLinkedList(linkedList);
         scanner.close();
+
+        reversedLinkedList = p_linkedList.reverse(linkedList);
+        p_linkedList.printLinkedList(reversedLinkedList);
     }
 }
