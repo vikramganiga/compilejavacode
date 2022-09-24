@@ -1,8 +1,9 @@
-package com.core.linkedlist;
+package com.ds.linkedList;
 
 import java.util.Scanner;
 
-import javax.lang.model.util.ElementScanner14;
+import com.core.linkedlist.ProcessLinkedList;
+import com.core.linkedlist.SampleLinkedList;
 
 /**
  * This is an to practice traversing a linked list.
@@ -12,49 +13,22 @@ import javax.lang.model.util.ElementScanner14;
  * else , there is nothing to print.
  */
 
-class CompileLinkedList {
+class TestJoinLinkedList {
 
     public static void main(String args[]) {
         ProcessLinkedList p_linkedList = new ProcessLinkedList();
-        SampleLinkedList linkedList = null;
+
         SampleLinkedList linkedListA = null;
         SampleLinkedList linkedListB = null;
+        SampleLinkedList linkedListR = null;
 
-        SampleLinkedList reversedLinkedList = null;
-
-        // create new linkedlist
         Scanner scanner = new Scanner(System.in);
-        int noOfNodes = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2029\u2028\u0085])?");
-
-        for (int i = 0; i < noOfNodes; i++) {
-            int value = scanner.nextInt();
-
-            scanner.skip("(\n\r|[\n\r\u2029\u2028\u0085])?");
-
-            linkedList = p_linkedList.addAtTail(linkedList, value);
-        }
-
-        // insert at position
-        p_linkedList.insertAtPosition(linkedList, 123, 3);
-
-        // print linkedlist before delete
-        p_linkedList.printLinkedList(linkedList);
-
-        // delete node position
-        p_linkedList.deleteNode(linkedList, 2);
-
-        // print linkedlist after delete
-        p_linkedList.printLinkedList(linkedList);
-
-        reversedLinkedList = p_linkedList.reverse(linkedList);
-        p_linkedList.printLinkedList(reversedLinkedList);
 
         // Compare two linkedList
 
         // create new linkedlistA
         System.out.println("Please enter linkedList A");
-        noOfNodes = scanner.nextInt();
+        int noOfNodes = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2029\u2028\u0085])?");
 
         for (int i = 0; i < noOfNodes; i++) {
@@ -78,11 +52,9 @@ class CompileLinkedList {
             linkedListB = p_linkedList.addAtTail(linkedListB, value);
         }
 
-        boolean result = p_linkedList.compareLinkedList(linkedListA, linkedListB);
-        if (result)
-            System.out.println("Both the linked list is same ");
-        else
-            System.out.println("Both the linked list is not same ");
+        linkedListR = p_linkedList.mergeLinkedList(linkedListA, linkedListB);
+       
+        p_linkedList.printLinkedList(linkedListR);
 
         // close the scanner
         scanner.close();

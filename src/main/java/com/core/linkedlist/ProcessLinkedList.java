@@ -21,11 +21,10 @@ public class ProcessLinkedList {
 
         for (; data.size() != 0;) {
             Integer temp_data = data.remove(data.size() - 1);
-            if (reverseHead == null){
+            if (reverseHead == null) {
                 reverseHead = new SampleLinkedList(temp_data);
                 reverseStart = reverseHead;
-            }
-            else {
+            } else {
                 tempNode = new SampleLinkedList(temp_data);
                 reverseHead.setNextNode(tempNode);
                 reverseHead = tempNode;
@@ -112,6 +111,45 @@ public class ProcessLinkedList {
         while (temp_list != null) {
             System.out.println(temp_list.getData());
             temp_list = temp_list.getNextNode();
+        }
+    }
+
+    // compare two linkedlist
+
+    public boolean compareLinkedList(SampleLinkedList listA, SampleLinkedList listB) {
+
+        while (listA != null || listB != null) {
+
+            if (listA.getData() != listB.getData())
+                return false;
+
+            listA = listA.getNextNode();
+            listB = listB.getNextNode();
+        }
+
+        if (listA == null && listB == null)
+            return true;
+
+        return false;
+    }
+    
+    //merge the linkedList
+
+    public SampleLinkedList mergeLinkedList(SampleLinkedList listA, SampleLinkedList listB){
+
+        SampleLinkedList temp= listA;
+        SampleLinkedList prev = null;
+        while(temp != null){
+            prev = temp;
+            temp = temp.getNextNode();
+        }
+        
+        if(prev != null){
+            prev.setNextNode(listB);
+            return listA;
+        }
+        else{
+            return listB;
         }
     }
 }
