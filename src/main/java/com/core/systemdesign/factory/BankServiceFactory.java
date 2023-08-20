@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 
 public class BankServiceFactory {
-    
+
       final static Map<String, Supplier<BankService>> mapv= new HashMap<String,Supplier<BankService>>();
    
      static {
@@ -22,5 +22,11 @@ public class BankServiceFactory {
         return new CreditCard();
     
         return null;
+   }
+
+   public  BankService getBankServiceJava8(String type){
+
+    Supplier<BankService> p = mapv.get(type);
+    return  p.get();
    }
 }

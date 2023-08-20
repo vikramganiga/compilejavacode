@@ -23,7 +23,8 @@ public class TestBankFactory {
         service.getMoney();
 
         //java 8 way
-
+        service = (BankService) factory.getBankServiceJava8(type);
+        service.getMoney();
         
     }
 
